@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Srushti Samant</title>
   </head>
+
   <body class="light" id="top">
     <header class="header center">
       <h3>
@@ -59,13 +60,18 @@
       <!-- About -->
       <div class="about center">
         <h1>Hi, I am <span class="about__name">Srushti Samant.</span></h1>
-        <h2 class="about__role">A Front-end Developer.</h2>
+        <h2 class="about__role">A <span id="dynamic-text"></span></h2>
         <p class="about__desc">
-          Consectetur neque sed quam molestiae consectetur nesciunt sit alias
-          vitae libero perferendis reprehenderit optio veritatis accusantium at
-          voluptatum cumque temporibus et explicabo iste porro quis numquam
-          distinctio repellendus adipisci nam perferendis amet eaque hic
-          voluptates.
+          A Computer Science graduate student with extensive internship
+          experience keen on transitioning to a Software Development role.
+          Former Automation Development Analyst at Accenture responsible for
+          developing automation scripts, translating strategic initiatives into
+          executable features and significantly reducing manual labor.
+          Successfully developed applications and APIs in multiple internships,
+          showcasing proficiency in front-end and back-end technologies while
+          collaborating on complex projects. Eager to leverage hands-on
+          experience and technical skills to support product feature development
+          and bug resolution for innovative software solutions.
         </p>
 
         <div class="about__contact center">
@@ -197,40 +203,129 @@
 
       <!-- Experience -->
       <section id="experience" class="section experience">
-        <h2 class="section__title">Experience</h2>
+        <h2 class="section__title">Work Experience</h2>
         <div class="timeline">
           <div class="timeline__item">
-            <h3 class="timeline__title">Software Engineer</h3>
-            <span class="timeline__company">Amazon</span>
-            <span class="timeline__date">May 2022 - Aug 2022</span>
-            <p class="timeline__description">
-              Worked on automating the cancellation of schedules for offboarded
-              delivery partners, reducing processing time from 24 hours to 1
-              minute.
-            </p>
-          </div>
-          <div class="timeline__item">
-            <h3 class="timeline__title">Graduate Teaching Assistant</h3>
+            <h3 class="timeline__title">Graduate Instructional Assistant</h3>
             <span class="timeline__company"
               >University of North Carolina at Charlotte</span
             >
-            <span class="timeline__date">Jan 2023 - Present</span>
-            <p class="timeline__description">
-              Assisted in ITCS-6114 (Data Structures and Algorithms), providing
-              tutorial sessions and helping students with assignments.
-            </p>
+            <span class="timeline__date">Sept 2024 - Present</span>
+            <div class="timeline__description hidden">
+              <ul>
+                <li>
+                  Assist the professor in delivering lectures, labs, and
+                  demonstrations related to C programming concepts.
+                </li>
+                <li>
+                  Provide one-on-one and group tutoring sessions to help
+                  students with programming assignments, debugging, and
+                  understanding core C programming principles.
+                </li>
+                <li>
+                  Develop supplemental learning materials, including coding
+                  examples and practice problems, to reinforce key topics.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <h3 class="timeline__title">Software Development Intern</h3>
+            <span class="timeline__company"
+              >Mortgage Industry Advisory Corporation (MIAC Analytics)</span
+            >
+            <span class="timeline__date">June 2024 - Aug 2024</span>
+            <div class="timeline__description hidden">
+              <ul>
+                <li>
+                  Developed a .NET application using Angular, TypeScript, and C,
+                  including designing user interfaces, writing TypeScript code
+                  for front-end functionality, and implementing C business
+                  logic.
+                </li>
+                <li>
+                  Created RESTful APIs for secure database connections, working
+                  with SQL and Entity Framework for data management.
+                </li>
+                <li>
+                  Collaborated on features for mortgage servicing rights (MSR)
+                  and mortgage-backed securities (MBS) pricing models, utilizing
+                  financial and statistical models for calculations.
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="timeline__item">
-            <h3 class="timeline__title">Master's in Computer Science</h3>
+            <h3 class="timeline__title">Graduate Research Assistant</h3>
             <span class="timeline__company"
               >University of North Carolina at Charlotte</span
             >
-            <span class="timeline__date">Aug 2022 - Dec 2024</span>
-            <p class="timeline__description">
-              Specializing in Machine Learning and Information Security, with
-              relevant projects in big data, Android development, and cloud
-              computing.
-            </p>
+            <span class="timeline__date">Jan 2023 - May 2024</span>
+            <div class="timeline__description hidden">
+              <ul>
+                <li>
+                  Responsible for conducting data mining and exploratory data
+                  analysis to extract valuable insights for research projects
+                  using Python, Matplotlib, and Tableau under the guidance of
+                  Dr. Qiong Cheng.
+                </li>
+                <li>
+                  Utilize OpenAI's large language models, including GPT-3, to
+                  contribute to natural language understanding and generation
+                  tasks.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <h3 class="timeline__title">Application Development Analyst</h3>
+            <span class="timeline__company">Accenture</span>
+            <span class="timeline__date">Mar 2021 - Jul 2023</span>
+            <div class="timeline__description hidden">
+              <ul>
+                <li>
+                  Led a team of 5 in the development of touchless test
+                  automation scripts for Atreides Portal, resulting in the
+                  elimination of 50 hours of manual work per week and delivering
+                  substantial annual cost savings of $500,000 through enhanced
+                  automation and operational efficiency.
+                </li>
+                <li>
+                  Scripted front-end and back-end test scenarios, executed
+                  real-world customer order journeys, and tracked defects using
+                  project tools like JIRA; reduced critical defects by 40% and
+                  improved overall product quality.
+                </li>
+                <li>
+                  Automated 1200+ test cases and measured performance for
+                  customers' data, which helped increase efficiency and reduced
+                  testing time from 12 hours to 45 minutes in various
+                  environments of the client application.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <h3 class="timeline__title">Software Development Intern</h3>
+            <span class="timeline__company">Hewlett Packard Enterprise</span>
+            <span class="timeline__date">Mar 2020 - Sept 2020</span>
+            <div class="timeline__description hidden">
+              <ul>
+                <li>
+                  Assisted in developing a “Personalized Health-Care Management
+                  System” for critical patients by creating an Emergency Medical
+                  System (EMS) using Java and JSP on the NetBeans IDE.
+                </li>
+                <li>
+                  Integrated the EMS, leading to a significant improvement in
+                  emergency response time, reducing it from 22 minutes to 30
+                  seconds.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -567,7 +662,8 @@
 
   .about__desc {
     font-size: 1rem;
-    max-width: 600px;
+    max-width: 800px;
+    text-align: justify;
   }
 
   .about__desc,
@@ -767,6 +863,17 @@
     margin-top: 0.5em;
     font-size: 1rem;
     color: var(--clr-fg);
+  }
+
+  .timeline__description ul {
+    list-style-type: disc;
+    margin-left: 1.5em;
+    transition: opacity 0.3s ease;
+  }
+
+  .hidden {
+    display: none;
+    /* Hide elements with this class */
   }
 
   /* Contact Form */
