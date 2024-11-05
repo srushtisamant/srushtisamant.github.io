@@ -1,1 +1,3 @@
-# srushtisamant.github.io
+# Portfolio
+
+Access the portfolio here: https://srushtisamant.github.io
