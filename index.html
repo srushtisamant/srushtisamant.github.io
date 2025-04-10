@@ -317,21 +317,48 @@
 
       <!-- Skills -->
       <section class="section skills" id="skills">
-        <h2 class="section__title">Skills</h2>
-        <ul class="skills__list">
-          <li class="skills__list-item btn btn--plain">HTML</li>
-          <li class="skills__list-item btn btn--plain">CSS</li>
-          <li class="skills__list-item btn btn--plain">SCSS</li>
-          <li class="skills__list-item btn btn--plain">JavaScript</li>
-          <li class="skills__list-item btn btn--plain">TypeScript</li>
-          <li class="skills__list-item btn btn--plain">React</li>
-          <li class="skills__list-item btn btn--plain">Redux</li>
-          <li class="skills__list-item btn btn--plain">Git</li>
-          <li class="skills__list-item btn btn--plain">Material UI</li>
-          <li class="skills__list-item btn btn--plain">Jest</li>
-          <li class="skills__list-item btn btn--plain">Enzyme</li>
-          <li class="skills__list-item btn btn--plain">CI/CD</li>
-        </ul>
+        <h2 class="section__title">My <span style="color: var(--clr-primary);">Skills</span></h2>
+        <div class="skills-grid">
+          <!-- Programming Languages -->
+          <div class="skill-card">
+            <h3>Programming Languages</h3>
+            <ul>
+              <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" /><span>Java</span><div class="bar"><div class="progress" style="width: 90%"></div></div></li>
+              <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C/C++" /><span>C/C++</span><div class="bar"><div class="progress" style="width: 90%"></div></div></li>
+              <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /><span>Python</span><div class="bar"><div class="progress" style="width: 70%"></div></div></li>
+            </ul>
+          </div>
+      
+          <!-- Frameworks -->
+          <div class="skill-card">
+            <h3>Frameworks and Libraries</h3>
+            <ul>
+              <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node" /><span>Node</span><div class="bar"><div class="progress" style="width: 90%"></div></div></li>
+              <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="VueJS" /><span>VueJS</span><div class="bar"><div class="progress" style="width: 90%"></div></div></li>
+              <li><img src="https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.svg" alt="Streamlit" /><span>Streamlit</span><div class="bar"><div class="progress" style="width: 70%"></div></div></li>
+            </ul>
+          </div>
+      
+          <!-- Databases -->
+          <div class="skill-card">
+            <h3>Database Technologies</h3>
+            <ul>
+              <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" /><span>SQL</span><div class="bar"><div class="progress" style="width: 90%"></div></div></li>
+              <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" /><span>PostgreSQL</span><div class="bar"><div class="progress" style="width: 90%"></div></div></li>
+              <li><img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" alt="BigQuery" /><span>Google BigQuery</span><div class="bar"><div class="progress" style="width: 70%"></div></div></li>
+            </ul>
+          </div>
+      
+          <!-- Tools -->
+          <div class="skill-card">
+            <h3>Tools</h3>
+            <ul>
+              <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" /><span>GitHub</span><div class="bar"><div class="progress" style="width: 90%"></div></div></li>
+              <li><img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" /><span>Postman</span><div class="bar"><div class="progress" style="width: 90%"></div></div></li>
+              <li><img src="https://cdn.worldvectorlogo.com/logos/jira-1.svg" alt="JIRA" /><span>JIRA</span><div class="bar"><div class="progress" style="width: 70%"></div></div></li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <!-- Contact -->
@@ -706,18 +733,76 @@
     margin-left: 0.5em;
   }
 
-  .skills__list {
-    max-width: 450px;
-    width: 95%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Changed from auto-fit to fixed 2 columns */
+  gap: 2em;
+  margin-top: 2em;
+}
 
-  .skills__list-item {
-    margin: 0.5em;
+
+.skill-card {
+  background-color: var(--clr-bg-alt);
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.skill-card h3 {
+  color: var(--clr-primary);
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-card li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+.skill-card img {
+  width: 32px;
+  height: 32px;
+  margin-right: 1em;
+}
+
+.skill-card {
+  background-color: var(--clr-bg-alt);
+  padding: 1em; /* reduced from 1.5em */
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  text-align: left;
+  font-size: 0.9rem; /* slightly smaller text */
+}
+
+.bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin-left: 1em;
+  flex: 2;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--clr-primary);
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
+}
+
 
   .contact {
     flex-direction: column;
@@ -884,4 +969,6 @@
     border-color: var(--clr-primary);
     box-shadow: 0 0 5px var(--clr-primary);
   }
+
+
 </style>
