@@ -105,3 +105,26 @@ document.querySelectorAll(".timeline__item").forEach((item) => {
     description.classList.toggle("hidden"); // Toggle the hidden class
   });
 });
+
+function openTab(tabId, btn) {
+  const allTabs = document.querySelectorAll('.tab-content');
+  const allButtons = document.querySelectorAll('.tab-button');
+
+  // Hide all tab contents
+  allTabs.forEach(tab => tab.classList.remove('active'));
+
+  // Deactivate all buttons
+  allButtons.forEach(button => button.classList.remove('active'));
+
+  // Show selected tab
+  document.getElementById(tabId).classList.add('active');
+
+  // Activate selected button
+  btn.classList.add('active');
+}
+
+
+function toggleDescription(cardElement) {
+  cardElement.classList.toggle('expanded');
+}
+
