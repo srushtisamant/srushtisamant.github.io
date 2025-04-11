@@ -266,7 +266,7 @@ main {
 
 
 .section__title {
-  margin-top: 1.5em;
+  margin-top: 1em;
   text-align: center;
   margin-bottom: 1em;
   text-transform: uppercase;
@@ -391,6 +391,15 @@ main {
   transition: transform 0.2s linear;
   position: relative;
   z-index: 3;
+  height: 400px;
+}
+
+.project .span{
+  font-family: inherit;
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  right: 1em;
 }
 
 .project:hover {
@@ -399,6 +408,7 @@ main {
 
 .project__description {
   margin-top: 1em;
+  text-align: justify;
 }
 
 .project__stack {
