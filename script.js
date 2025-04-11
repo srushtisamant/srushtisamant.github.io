@@ -122,9 +122,3 @@ function openTab(tabId, btn) {
   // Activate selected button
   btn.classList.add('active');
 }
-
-
-function toggleDescription(cardElement) {
-  cardElement.classList.toggle('expanded');
-}
-
