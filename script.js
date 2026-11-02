@@ -1,31 +1,24 @@
 const body = document.body;
-const btnTheme = document.querySelector(".fa-moon");
+const btnTheme = document.getElementById("btn-theme");
 const btnHamburger = document.querySelector(".fa-bars");
 
-const addThemeClass = (bodyClass, btnClass) => {
-  body.classList.add(bodyClass);
-  btnTheme.classList.add(btnClass);
+const applyTheme = (theme) => {
+  body.classList.remove("light", "dark");
+  body.classList.add(theme);
+  btnTheme.classList.remove("fa-moon", "fa-sun");
+  btnTheme.classList.add(theme === "dark" ? "fa-sun" : "fa-moon");
 };
 
-const getBodyTheme = localStorage.getItem("portfolio-theme");
-const getBtnTheme = localStorage.getItem("portfolio-btn-theme");
-
-addThemeClass(getBodyTheme, getBtnTheme);
+// Dark is the default unless the visitor has chosen light
+applyTheme(localStorage.getItem("portfolio-theme") === "light" ? "light" : "dark");
 
 const isDark = () => body.classList.contains("dark");
 
-const setTheme = (bodyClass, btnClass) => {
-  body.classList.remove(localStorage.getItem("portfolio-theme"));
-  btnTheme.classList.remove(localStorage.getItem("portfolio-btn-theme"));
-
-  addThemeClass(bodyClass, btnClass);
-
-  localStorage.setItem("portfolio-theme", bodyClass);
-  localStorage.setItem("portfolio-btn-theme", btnClass);
+const toggleTheme = () => {
+  const theme = isDark() ? "light" : "dark";
+  applyTheme(theme);
+  localStorage.setItem("portfolio-theme", theme);
 };
-
-const toggleTheme = () =>
-  isDark() ? setTheme("light", "fa-moon") : setTheme("dark", "fa-sun");
 
 btnTheme.addEventListener("click", toggleTheme);
 
@@ -61,11 +54,8 @@ document.addEventListener("scroll", scrollUp);
 const textElement = document.getElementById("dynamic-text");
 const phrases = [
   "software engineer.",
-  "developer.",
+  "backend developer.",
   "problem solver.",
-  "coder.",
-  "creative thinker.",
-  "geek.",
 ];
 let phraseIndex = 0;
 let charIndex = 0;
