@@ -60,7 +60,7 @@ document.addEventListener("scroll", scrollUp);
 // Typing effect script
 const textElement = document.getElementById("dynamic-text");
 const phrases = [
-  "student.",
+  "software engineer.",
   "developer.",
   "problem solver.",
   "coder.",
