@@ -4,21 +4,39 @@ import { Reveal, Section } from "./shared.jsx";
 export default function Certifications() {
   return (
     <Section id="certifications" title="Certifications">
-      <ul className="certs">
-        {certifications.map((cert, i) => (
-          <Reveal key={cert.id} as="li" delay={(i % 2) * 0.1} className="card cert">
-            <i aria-hidden="true" className="fas fa-certificate" />
-            <div>
-              <h3>{cert.name}</h3>
-              <p>Microsoft · {cert.issued}</p>
-              <p>Credential ID: {cert.id}</p>
-              <a href={cert.url} target="_blank" rel="noreferrer" className="text-link">
-                Show credential <i aria-hidden="true" className="fas fa-arrow-up-right-from-square" />
-              </a>
-            </div>
-          </Reveal>
-        ))}
-      </ul>
+      <Reveal className="certs">
+        <table>
+          <caption>All issued by Microsoft</caption>
+          <thead>
+            <tr>
+              <th scope="col">Certification</th>
+              <th scope="col">Issued</th>
+              <th scope="col">Credential ID</th>
+              <th scope="col">Verify</th>
+            </tr>
+          </thead>
+          <tbody>
+            {certifications.map((cert) => (
+              <tr key={cert.id} className="cert">
+                <th scope="row">{cert.name}</th>
+                <td>{cert.issued}</td>
+                <td>{cert.id}</td>
+                <td>
+                  <a
+                    href={cert.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-link"
+                    aria-label={`Show credential for ${cert.name}`}
+                  >
+                    Show credential ↗
+                  </a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </Reveal>
     </Section>
   );
 }

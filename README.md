@@ -4,7 +4,7 @@ My personal portfolio website, covering my work as a software engineer, my proje
 
 **Live site:** https://srushtisamant.github.io
 
-![Portfolio home page in the dark theme](public/images/screenshot.png)
+![Portfolio home page in the light theme](public/images/screenshot.png)
 
 ## What's on the site
 
@@ -12,26 +12,25 @@ My personal portfolio website, covering my work as a software engineer, my proje
 | --- | --- |
 | Home | A short introduction, with links to my resume, GitHub, and LinkedIn |
 | Projects | Posturelytics.AI and AI1y, with their tech stacks and source code |
-| Experience & Education | A timeline of my roles and degrees, split into two tabs |
+| Experience & Education | A chart of my roles and degrees, drawn to scale like a system trace |
 | Skills | Languages, frameworks, databases, cloud and DevOps tools, and security and AI |
-| Certifications | Microsoft certifications with credential IDs and links to verify them |
-| Contact | A form that opens the visitor's email app with their message |
+| Certifications | A table of Microsoft certifications with credential IDs and links to verify them |
+| Contact | My email address, with a button to copy it |
 
 ## Features
 
-- Dark theme by default, with a light theme toggle that remembers the visitor's choice
-- Responsive layout, with a hamburger menu on smaller screens
+- A notebook-style light theme by default, with a dark theme toggle that remembers the visitor's choice
+- A career chart where each bar's position and length come from the real dates, and selecting a row shows the details
+- Responsive layout, with a hamburger menu and rows that open in place on smaller screens
 - Fixed navigation that highlights the current section, with each section filling the screen when you jump to it
-- Scroll progress bar, a timeline that fills as you scroll, and content that fades in as it appears
-- Typing animation in the introduction
 - Animations switch off for visitors who have reduced motion turned on
 
 ## Built with
 
 - [React](https://react.dev/) and [Vite](https://vite.dev/)
 - [Framer Motion](https://motion.dev/) for animation
-- [Inter](https://fonts.google.com/specimen/Inter) and [Poppins](https://fonts.google.com/specimen/Poppins) from Google Fonts
-- [Font Awesome](https://fontawesome.com/) and [Devicon](https://devicon.dev/) for icons
+- [Fraunces](https://fonts.google.com/specimen/Fraunces), [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans), and [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) from Google Fonts
+- [Font Awesome](https://fontawesome.com/) for icons
 - [GitHub Pages](https://pages.github.com/) and GitHub Actions for hosting and deployment
 
 ## Project structure
@@ -68,8 +67,8 @@ To check the production build, run `npm run build` and then `npm run preview`.
 
 | To change | Edit |
 | --- | --- |
-| Projects, experience, education, skills, or certifications | `src/data/portfolio.js` |
-| Resume link, introduction, or typing animation phrases | `profile` in `src/data/portfolio.js` |
+| Projects, experience, education, skills, or certifications | `src/data/portfolio.js` (the career chart redraws itself from the `date` of each entry) |
+| Resume link, introduction, or the facts on the home page | `profile` in `src/data/portfolio.js` |
 | Theme colors | The variables at the top of `src/styles.css` |
 | Images | Add them to `public/images/` and reference them as `/images/name.png` |
 

@@ -4,7 +4,7 @@ import { navItems } from "../data/portfolio.js";
 
 function useTheme() {
   const [theme, setTheme] = useState(
-    () => document.documentElement.dataset.theme || "dark",
+    () => document.documentElement.dataset.theme || "light",
   );
 
   const toggle = () => {
@@ -87,7 +87,7 @@ export default function Header() {
     <header className="header">
       <div className="header__inner">
         <a href="#about" className="header__logo" aria-label="Back to top">
-          SS
+          Srushti Samant
         </a>
 
         <nav className="nav" aria-label="Main">
